@@ -13,13 +13,8 @@ depends=(gtk3 gtk-layer-shell)
 makedepends=(cargo-nightly git)
 provides=("$_pkgname")
 conflicts=("$_pkgname")
-source=("git+$url.git?signed")
+source=("git+$url.git")
 b2sums=('SKIP')
-validpgpkeys=(
-	'94E8F34BCE4F4BA8ED9B29BD50E76B4711E4C3E4' # Leon Kowarschick <5300871+elkowar@users.noreply.github.com>
-	'5DE3E0509C47EA3CF04A42D34AEE18F83AFDEB23' # GitHub (web-flow commit signing) <noreply@github.com>
-	'9EFD181455D31DD0F42DA932862BA3D7D7760F13' # Fix I guess
-)
 
 prepare() {
 	cd $_pkgname
