@@ -19,7 +19,7 @@ b2sums=('SKIP')
 prepare() {
 	cd $_pkgname
 	export RUSTUP_TOOLCHAIN=nightly
-	cargo update
+#	cargo update
 	cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
 }
 
